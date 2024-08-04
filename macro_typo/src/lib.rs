@@ -12,39 +12,39 @@ pub use pallet::*;
 
 #[frame::pallet]
 pub mod pallet {
-    use super::*;
+	use super::*;
 
-    #[pallet::config]
-    pub trait Config: frame_system::Config {}
+	#[pallet::config]
+	pub trait Config: frame_system::Config {}
 
-    #[pallet::pallet]
-    pub struct Pallet<T>(_);
+	#[pallet::pallet]
+	pub struct Pallet<T>(_);
 }
 
 #[cfg(test)]
 mod test {
-    use super::*;
-    use frame::runtime::prelude::*;
+	use super::*;
+	use frame::runtime::prelude::*;
 
-    pub type Block = frame_system::mocking::MockBlock<Runtime>;
+	pub type Block = frame_system::mocking::MockBlock<Runtime>;
 
-    #[derive_impl(frame_system::config_preludes::TestDefaultConfig as frame_system::DefaultConfig)]
-    impl frame_system::Config for Runtime {
-        type Block = Block;
-    }
+	#[derive_impl(frame_system::config_preludes::TestDefaultConfig as frame_system::DefaultConfig)]
+	impl frame_system::Config for Runtime {
+		type Block = Block;
+	}
 
-    impl super::Config for Runtime {}
+	impl super::Config for Runtime {}
 
-    #[frame::deps::frame_support::runtime]
-    mod runtime {
-        #[runtime::runtime]
-        #[runtime::derive(RuntimeCall, RuntimeEvent, RuntimeOrigin, RuntimeError, RuntimeTask)]
-        pub struct Runtime;
+	#[frame::deps::frame_support::runtime]
+	mod runtime {
+		#[runtime::runtime]
+		#[runtime::derive(RuntimeCall, RuntimeEvent, RuntimeOrigin, RuntimeError, RuntimeTask)]
+		pub struct Runtime;
 
-        #[runtime::pallet_index(0)]
-        pub type System = frame_system;
+		#[runtime::pallet_index(0)]
+		pub type System = frame_system;
 
-        #[runtime::pallet_index(1)]
-        pub type Template = super;
-    }
+		#[runtime::pallet_index(1)]
+		pub type Template = super;
+	}
 }

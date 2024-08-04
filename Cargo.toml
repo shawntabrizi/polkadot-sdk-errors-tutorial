@@ -7,8 +7,9 @@ edition = "2021"
 
 [workspace]
 members = [
-    "macro_typo",
-    "no_std",
+	"macro_typo",
+	"no_std",
+	"import_trait",
 ]
 resolver = "2"
 
