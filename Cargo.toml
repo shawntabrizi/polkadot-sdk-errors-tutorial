@@ -9,7 +9,7 @@ edition = "2021"
 members = [
 	"macro_typo",
 	"no_std",
-	"import_trait",
+	"import_trait", "duplicate_associated_type", "use_result",
 ]
 resolver = "2"
 
