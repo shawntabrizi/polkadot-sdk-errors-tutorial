@@ -1,0 +1,15 @@
+[workspace.package]
+license = "MIT-0"
+authors = ["Shawn Tabrizi <shawntabrizi@gmail.com>"]
+homepage = "TODO: Add URL"
+repository = "https://github.com/shawntabrizi/polkadot-sdk-errors-tutorial.git"
+edition = "2021"
+
+[workspace]
+members = [
+    "macro_typo",
+    "no_std",
+]
+resolver = "2"
+
+[workspace.dependencies]

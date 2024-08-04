@@ -1,0 +1,10 @@
+[package]
+name = "no_std"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+substrate-wasm-builder = "24.0.0"
+
+[features]
+std = []
