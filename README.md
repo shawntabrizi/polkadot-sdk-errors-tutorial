@@ -9,3 +9,4 @@ An interactive tutorial teaching you how to solve the most common errors when wo
 - [ ] Rust error says to import from a strange crate, like the ones coming from the macros.
 - [ ] Duplicate associated type name within a supertrait.
 - [ ] Trying to do math operations on two different generic types.
+- [ ] Forgetting to use a result, and NOT doing `let _ =` as the compiler suggests.
